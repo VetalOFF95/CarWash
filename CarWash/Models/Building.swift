@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK:
 //MARK: - Protocols
 protocol BuildingProtocol {
 
@@ -20,6 +21,7 @@ protocol AdministrationProtocol: BuildingProtocol {
     var rooms: [AdmitistrationRoomProtocol] { get set }
 }
 
+//MARK: 
 //MARK: - Classes
 class CarWash: CarWashProtocol {
     var rooms: [CarWashRoomProtocol] = []

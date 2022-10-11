@@ -7,24 +7,27 @@
 
 import Foundation
 
+//MARK:
 //MARK: - Protocols
 protocol WorkerProtocol {
     var salary: Int { get set }
     var experience: Double { get set }
+    func doWork(car: CarProtocol)
 }
 
-protocol WasherDelegate {
-    func washCar(car: CarProtocol)
+protocol WasherDelegate: WorkerProtocol {
+    var delegate: AccountentDelegate? { get set }
 }
 
-protocol AccountentDelegate {
-    func countMoney(money: Double) -> Double
+protocol AccountentDelegate: WorkerProtocol {
+    var delegate: DirectorDelegate? { get set }
 }
 
-protocol DirectorDelegate {
-    func makeProfit(money: Double)
+protocol DirectorDelegate: WorkerProtocol {
+    
 }
 
+//MARK: 
 //MARK: - Classes
 class Worker: WorkerProtocol {
     var salary: Int
@@ -34,28 +37,34 @@ class Worker: WorkerProtocol {
         self.salary = salary
         self.experience = experience
     }
+    
+    func doWork(car: CarProtocol) {
+        // should be overriden
+    }
 }
 
 class Washer: Worker, WasherDelegate {
-    func washCar(car: CarProtocol){
-        print("Washer washes the car")
+    var delegate: AccountentDelegate?
+    
+    override func doWork(car: CarProtocol) {
+        print("Washer washes the car. Status: \(car.status), money: \(car.money)")
         var cleanCar = car
         cleanCar.status = .clean
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "giveMoneyToAccountant"),
-                                        object: nil,
-                                        userInfo: ["money": cleanCar.money])
+        delegate?.doWork(car: cleanCar)
     }
 }
 
 class Accountent: Worker, AccountentDelegate {
-    func countMoney(money: Double) -> Double {
-        print("Accountent counts the money")
-        return money
+    var delegate: DirectorDelegate?
+    
+    override func doWork(car: CarProtocol) {
+        print("Accountent counts the money. Status: \(car.status), money: \(car.money)")
+        delegate?.doWork(car: car)
     }
 }
 
 class Director: Worker, DirectorDelegate {
-    func makeProfit(money: Double) {
-        print("Make profit")
+    override func doWork(car: CarProtocol) {
+        print("Director make profit: \(car.money)")
     }
 }
