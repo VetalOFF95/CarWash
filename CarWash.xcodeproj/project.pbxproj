@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1795B228F81B2E0095C695 /* CarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1795B128F81B2E0095C695 /* CarFactory.swift */; };
+		FA84C13A28F95C3A00ECF268 /* Washer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84C13928F95C3A00ECF268 /* Washer.swift */; };
+		FA84C13C28F95E0D00ECF268 /* Accountant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84C13B28F95E0D00ECF268 /* Accountant.swift */; };
+		FA84C13E28F95E7000ECF268 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84C13D28F95E7000ECF268 /* Director.swift */; };
+		FA84C14028F96BCB00ECF268 /* CarWash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84C13F28F96BCB00ECF268 /* CarWash.swift */; };
+		FA84C14228F96BFC00ECF268 /* Administration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84C14128F96BFC00ECF268 /* Administration.swift */; };
 		FAEAF21E28E209DE0087C7B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF21D28E209DE0087C7B2 /* AppDelegate.swift */; };
 		FAEAF22028E209DE0087C7B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF21F28E209DE0087C7B2 /* SceneDelegate.swift */; };
 		FAEAF22228E209DE0087C7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF22128E209DE0087C7B2 /* ViewController.swift */; };
 		FAEAF22528E209DE0087C7B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEAF22328E209DE0087C7B2 /* Main.storyboard */; };
 		FAEAF22728E209E30087C7B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEAF22628E209E30087C7B2 /* Assets.xcassets */; };
 		FAEAF22A28E209E30087C7B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEAF22828E209E30087C7B2 /* LaunchScreen.storyboard */; };
-		FAEAF23328E20CF50087C7B2 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF23228E20CF50087C7B2 /* Building.swift */; };
-		FAEAF23528E20D0F0087C7B2 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF23428E20D0F0087C7B2 /* Room.swift */; };
+		FAEAF23328E20CF50087C7B2 /* BuildingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF23228E20CF50087C7B2 /* BuildingProtocols.swift */; };
 		FAEAF23728E2151C0087C7B2 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF23628E2151C0087C7B2 /* Worker.swift */; };
 		FAEAF23928E215270087C7B2 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAF23828E215270087C7B2 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1795B128F81B2E0095C695 /* CarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFactory.swift; sourceTree = "<group>"; };
+		FA84C13928F95C3A00ECF268 /* Washer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Washer.swift; sourceTree = "<group>"; };
+		FA84C13B28F95E0D00ECF268 /* Accountant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accountant.swift; sourceTree = "<group>"; };
+		FA84C13D28F95E7000ECF268 /* Director.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		FA84C13F28F96BCB00ECF268 /* CarWash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWash.swift; sourceTree = "<group>"; };
+		FA84C14128F96BFC00ECF268 /* Administration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Administration.swift; sourceTree = "<group>"; };
 		FAEAF21A28E209DE0087C7B2 /* CarWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEAF21D28E209DE0087C7B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEAF21F28E209DE0087C7B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +39,7 @@
 		FAEAF22628E209E30087C7B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEAF22928E209E30087C7B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEAF22B28E209E30087C7B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEAF23228E20CF50087C7B2 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
-		FAEAF23428E20D0F0087C7B2 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		FAEAF23228E20CF50087C7B2 /* BuildingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingProtocols.swift; sourceTree = "<group>"; };
 		FAEAF23628E2151C0087C7B2 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		FAEAF23828E215270087C7B2 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +55,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA84C14328F96C5300ECF268 /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAF23228E20CF50087C7B2 /* BuildingProtocols.swift */,
+				FA84C13F28F96BCB00ECF268 /* CarWash.swift */,
+				FA84C14128F96BFC00ECF268 /* Administration.swift */,
+			);
+			path = Buildings;
+			sourceTree = "<group>";
+		};
+		FA84C14428F96C7100ECF268 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAF23628E2151C0087C7B2 /* Worker.swift */,
+				FA84C13928F95C3A00ECF268 /* Washer.swift */,
+				FA84C13B28F95E0D00ECF268 /* Accountant.swift */,
+				FA84C13D28F95E7000ECF268 /* Director.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		FAEAF21128E209DE0087C7B2 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +103,7 @@
 				FAEAF22628E209E30087C7B2 /* Assets.xcassets */,
 				FAEAF22828E209E30087C7B2 /* LaunchScreen.storyboard */,
 				FAEAF22B28E209E30087C7B2 /* Info.plist */,
+				FA1795B128F81B2E0095C695 /* CarFactory.swift */,
 			);
 			path = CarWash;
 			sourceTree = "<group>";
@@ -79,9 +111,8 @@
 		FAEAF23128E20C9D0087C7B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FAEAF23228E20CF50087C7B2 /* Building.swift */,
-				FAEAF23428E20D0F0087C7B2 /* Room.swift */,
-				FAEAF23628E2151C0087C7B2 /* Worker.swift */,
+				FA84C14328F96C5300ECF268 /* Buildings */,
+				FA84C14428F96C7100ECF268 /* Workers */,
 				FAEAF23828E215270087C7B2 /* Car.swift */,
 			);
 			path = Models;
@@ -158,12 +189,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEAF23528E20D0F0087C7B2 /* Room.swift in Sources */,
 				FAEAF22228E209DE0087C7B2 /* ViewController.swift in Sources */,
-				FAEAF23328E20CF50087C7B2 /* Building.swift in Sources */,
+				FA84C13A28F95C3A00ECF268 /* Washer.swift in Sources */,
+				FAEAF23328E20CF50087C7B2 /* BuildingProtocols.swift in Sources */,
+				FA84C14028F96BCB00ECF268 /* CarWash.swift in Sources */,
 				FAEAF21E28E209DE0087C7B2 /* AppDelegate.swift in Sources */,
+				FA1795B228F81B2E0095C695 /* CarFactory.swift in Sources */,
 				FAEAF23728E2151C0087C7B2 /* Worker.swift in Sources */,
 				FAEAF23928E215270087C7B2 /* Car.swift in Sources */,
+				FA84C13E28F95E7000ECF268 /* Director.swift in Sources */,
+				FA84C14228F96BFC00ECF268 /* Administration.swift in Sources */,
+				FA84C13C28F95E0D00ECF268 /* Accountant.swift in Sources */,
 				FAEAF22028E209DE0087C7B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

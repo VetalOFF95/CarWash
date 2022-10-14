@@ -8,45 +8,61 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var lastPriceLabel: UILabel!
+    @IBOutlet weak var sumPriceLabel: UILabel!
+    @IBOutlet weak var carsCountLabel: UILabel!
+    
+    private let carFactory = CarFactory()
+    private let carWash = CarWash()
+    private let administration = Administration()
+    
+    private var cars: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let carWash = CarWash()
-        let administration = Administration()
-        
+        prepareWorkers()
+    }
+    
+    private func prepareWorkers() {
         let washer = Washer(salary: 500, experience: 1)
         let accountant = Accountent(salary: 1000, experience: 2)
         let director = Director(salary: 5000, experience: 7.5)
-        washer.delegate = accountant
-        accountant.delegate = director
         
-        let carWashRoom = CarWashRoom()
-        carWashRoom.workerList.append(washer)
+        carWash.workersList.append(washer)
+        administration.accountantsList.append(accountant)
+        administration.directorsList.append(director)
         
-        let administrationRoom = AdministrationRoom()
-        
-        carWash.rooms.append(carWashRoom)
-        administration.rooms.append(administrationRoom)
-        
-        var carFactory = CarFactory()
-
-        carWashRoom.carList = carFactory.newCars(count: 10)
-        carWash.rooms[0].washCars()
+        washer.delegate = self
+        accountant.delegate = self
+        director.delegate = self
+    }
+    
+    @IBAction func addNewCar(_ sender: UIButton) {
+        let nextCar = carFactory.newCar()
+        cars += 1
+        carsCountLabel.text = "\(cars)"
+        carWash.washCar(car: nextCar)
     }
 }
 
-class CarFactory {
-    var carList: [CarProtocol] = []
+extension ViewController: WasherDelegate, AccountentDelegate, DirectorDelegate {
     
-    func newCars(count: Int) -> [CarProtocol] {
-        var i = 0
-        while i < count {
-            let car = Car(money: Double.random(in: 100...1000).rounded())
-            carList.append(car)
-            i += 1
-        }
-        return carList
+    func transferMoneyToAccountant(money: Double) {
+        print("Washer has washed the car. Money: \(money)")
+        administration.countMoney(money: money)
+        lastPriceLabel.text = "$ \(money)"
+    }
+    
+    func transferMoneyToDirector(money: Double) {
+        print("Accountent has counted the money. Money: \(money)")
+        administration.takeProfit(money: money)
+    }
+    
+    func finishFlow() {
+        print("Director has taken profit !")
+        sumPriceLabel.text = "$ \(administration.getProfit())"
     }
 }
 
