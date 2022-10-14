@@ -47,7 +47,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: WasherDelegate, AccountentDelegate, DirectorDelegate {
+extension ViewController: WasherDelegate,
+                          AccountentDelegate,
+                          DirectorDelegate {
     
     func transferMoneyToAccountant(money: Double) {
         print("Washer has washed the car. Money: \(money)")
